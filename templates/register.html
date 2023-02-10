@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
@@ -12,19 +12,40 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <script src="https://www.google.com/recaptcha/api.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
     <div class="login-form">
-        <form id="loginform" action="/sign_in" method="post">
-            <input type="email" name="email" required><br>
-            <input type="password" name="password" required><br>
-            <input type="text" name="firstname" required>
-            <input type="text" name="lastname" required><br>
-            <div class="g-recaptcha" data-sitekey="{{ site_key }}"></div><br>
+    <div class="border-marg">
+        <form id="loginform" action="/sign_up" method="post">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            <div class="input-group mb-3">
+              <span class="input-group-text">First and last name</span>
+              <input type="text" name="firstname" aria-label="First name" class="form-control">
+              <input type="text" name="lastname" aria-label="Last name" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <h6 id="result"></h6>
+            <div class="g-recaptcha" data-sitekey="{{ site_key }}"></div>
+            <br>
         </form>
-        <h4 id="result"></h4>
-        <button id="loginbtn" onclick="register();">Login</button>
+
+        <button id="loginbtn" onclick="register();" class="btn btn-primary">Register</button>
     </div>
-    <script src="{{url_for('static', filename='script.js')}}"></script>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 </html>

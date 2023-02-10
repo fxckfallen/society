@@ -22,7 +22,12 @@ def index():
     else:
         return redirect(url_for('login'))
 
-
+@app.route('/profile')
+def profile():
+    if 'logined' in session:
+        return render_template('profile.html')
+    else:
+        return redirect(url_for('login'))
 @app.route("/register")
 def register():
     return render_template('register.html', site_key = site_key)

@@ -1,3 +1,108 @@
 body {
     background-color: #141414;
 }
+.login-form {
+    height: auto;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.375rem;
+    border: solid 1px #495057;
+}
+.prof-head {
+    height: 322px;
+    width: 100%;
+    border-radius: 0.375rem;
+    display: flex;
+    background-color: #222222;
+}
+.main .menu .element {
+    width: 154px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+.main .menu .element:hover {
+    background-color: #333333;
+    cursor: pointer;
+
+}
+.main .menu {
+    margin: 0 16px 10px -6px;
+}
+.main .menu .element span {
+    margin-right: 10px;
+}
+.main .menu .element p {
+    margin: auto 0;
+}
+.prof-photos {
+    height: 282px;
+    width: 550px;
+    border-radius: 0.375rem;
+    border: solid 1px #495057;
+    background-color: #222222;
+}
+.prof-friends {
+    width: 345px;
+    height: 173px;
+    margin-left: 16px;
+    border-radius: 0.375rem;
+    border: solid 1px #495057;
+    background-color: #222222;
+}
+.prof-news {
+    width: 550px;
+}
+.prof-news .new {
+    height: 52px;
+    border-radius: 0.375rem;
+    border: solid 1px #495057;
+    background-color: #222222;
+}
+.prof-news .posts .filter {
+    height: 64px;
+    border-radius: 0.375rem;
+    border: solid 1px #495057;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #222222;
+}
+.prof-head .avatar {
+    vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: calc(322px - 20px - 150px);
+    margin-left: 20px;
+}
+.prof-head .info {
+    margin-top: calc(322px - 95px);
+    width: 721px;
+}
+.prof-head .info .fullname {
+    font-weight: 600;
+    font-size: 21px;
+    max-width: 200px;
+    line-height: 26px;
+    margin-left: 20px;
+}
+.prof-head .info .bio {
+    margin-left: 30px;
+}
+.prof-head .info .editbtn {
+    width: 94px;
+    height: 32px;
+    margin-left: auto;
+    margin-top: 0px;
+}
+.spacing {
+    height: 16px;
+}
+.border-marg {
+    margin: 20px;
+}
